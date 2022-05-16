@@ -1,0 +1,831 @@
+ /* bắt buộc phải có box-sizing : border-box ; */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Phann header cua youtube  */
+header{
+    position:sticky;
+    top: 0px;
+    display: flex;
+    padding: 10px 24px;
+    background-color: var(---color-header);
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(250, 150, 150,0.3);
+    z-index: 10;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+.fa-solid{
+    font-size: 26px;
+    color:  #000000;
+}
+
+.header-img-acc{
+    border-radius: 50% ;
+}
+.header-img-acc:hover{
+    cursor: pointer;
+}
+/* phần menu yt 1 */
+.header-menu-yt{
+    display: flex;
+    align-items: center;
+    /* width: calc(100% / 3); */
+    justify-content: space-between;
+}
+span b{
+    font-size: 22px;
+     letter-spacing: -1px;
+}
+.fa-bars{
+    font-size: 22px;
+    margin-right: 26px;
+}
+.fa-youtube{
+    color: red;
+    font-size: 26px;
+}
+
+/* phần search yt 2 */
+.header-search-yt{
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+    /* width: calc(100% / 3); */
+    justify-content: space-evenly;
+}
+.header-input{
+    /* width:  572px  ; */
+    width: 520px;
+    /* width: 100% ; */
+    height: 40px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    outline: none;
+    /* display: none; */
+}
+.header-search-icon{
+    background-color:var(---color-btn);
+    width: 64px;
+    height: 40px;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(82, 79, 79); */
+    border-right: 1px solid rgb(82, 79, 79);
+    border-top: 1px solid rgb(82, 79, 79);
+    border-bottom: 1px solid rgb(82, 79, 79);
+}
+.header-search-icon:hover{
+    background-color: var(---color-btn-hover);
+    cursor: pointer;
+}
+
+.fa-magnifying-glass{
+    padding: 8px 20px;
+    font-size: 20px;
+}
+.header-voice-icon{
+    background-color: var(---color-btn);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left:10px ;
+}
+.header-voice-icon:hover{
+    background-color: var(---color-btn-hover);
+    cursor: pointer;
+
+}
+.fa-microphone{
+    align-items: center;
+    padding: 10px 13px;
+    font-size: 20px;
+}
+
+/* phần account yt 3 */
+
+.header-account-yt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-account-yt div i{
+    margin-top: 5px;
+}
+
+.header-account-common{
+    margin: 0 14px;
+}
+
+.fa-video{
+font-size: 22px;
+position: relative;
+/* display: none; */
+}
+
+.fa-video:hover,
+.fa-focus:active{
+    cursor: pointer;
+}
+
+/* phần làm menu dropdown của icon camera  */
+
+.menu-dropdown-video{
+    position: absolute;
+    top: 33px;
+    left: -5px;
+    display: none;
+    width: 168px;
+    height: 86px;
+    font-family: 'Roboto',sans-serif; 
+    border: 1px solid rgb(224, 224, 224);
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    box-shadow: -1px 1px 4px 0px #f8dbdb;
+}
+
+/* .menu-dropdown-video::after{
+    content: "";
+    border-width:14px 15px ;
+    border-style: solid;
+    border-color: transparent transparent #ffeded transparent;
+    position: absolute;
+    right: 137px;
+    top: -29px;
+} */
+
+.show .menu-dropdown-video{
+display: block;
+animation: fadeIn ease-in-out 0.2s;
+}
+
+.slect-1{
+    margin-top: 14px;
+    padding-left: 20px;
+}
+.slect-2{
+    padding-left: 20px;
+}
+.slect-1:hover,
+.slect-2:hover{
+    background-color: var(---color-btn-hover);
+    cursor: pointer;
+}
+
+.fa-play,
+.fa-tower-broadcast{
+    font-size: 14px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+}
+.text-dropdown-video{
+font-size: 14px;
+}
+
+/* chức năng drop down của icon tv  */
+
+.fa-chromecast{
+    position: relative;
+    font-size: 26px;
+}
+.fa-chromecast:hover{
+    cursor: pointer;
+}
+.fa-chromecast:hover .menu-dropdown-tv{
+    display: block;
+    animation: fadeIn ease 1s;
+}
+.menu-dropdown-tv{
+    display: none;
+    position: absolute;
+    right: -46px;
+    top: 36px;
+    padding-bottom: 8px;
+    /* border: 1px dotted red; */
+    width: 122px;
+    background-color: white;
+    box-sizing: border-box;
+}
+/* .menu-dropdown-tv::after{
+    content: "";
+    border-width:14px 15px ;
+    border-style: solid;
+    border-color: transparent transparent #ffeded transparent;
+    position: absolute;
+    right: 43px;
+    top: -29px;
+} */
+.fa-tv{
+    font-size: 14px;
+    padding-left: 10px;
+}
+.menu-dropdown-tv span{
+    font-size: 14px;
+    font-family: 'Roboto';
+}
+
+/* chức năng drop down của icon bell  */
+
+.header-account-bell{
+ position: relative;   
+}
+.fa-bell:hover{
+    cursor: pointer;
+}
+.header-account-bell .showNotifi{
+    animation: fadeIn ease 0.4s;
+    display: block;
+}
+/* .header-account-bell:hover .header-account-main{
+    display: block;
+} */
+.fa-bell{
+    font-size: 22px;
+}
+
+.header-account-main{
+    position: absolute;
+    display: none;
+    border: 1px solid rgb(207, 207, 207);
+    top: 40px;
+    right: 12px;
+    box-shadow: -1px 1px 5px 1px #f8dbdb;
+    background-color: #ffffff;
+}
+
+.header-account-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.header-account-header p{
+    margin-left:20px ;
+}
+.header-account-header span i{
+    margin-right: 20px;
+}
+.header-account-content{
+    height: 388px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* hiệu ứng thanh slide  */
+.header-account-content::-webkit-scrollbar {
+    width: 8px;
+}
+.header-account-content:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+.header-account-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 6px;
+    visibility: hidden;
+}
+/* end  hiệu ứng thanh slide  */
+.header-account-first{
+    display: flex;
+    /* border: 1px solid violet; */
+    height: 120px;
+    width: 480px;
+    align-items: center;
+}
+.header-acc-logo{
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.acc-text-main{
+    padding-left: 10px;
+    padding-right: 2px;
+}
+.acc-text{
+    font-size: 15px;
+}
+.acc-time{
+    font-size: 12px;
+    /* padding: 0px 0px; */
+}
+.header-acc-video{
+    margin-right: 10px;
+}
+.header-account-first i{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.header-account-first:hover {
+    background-color: #ffeded;
+    cursor: pointer;
+}
+.acc-selection{
+    visibility: hidden;
+}
+
+div .fa-trash{
+    padding: 10px 12px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+}
+div .fa-trash:hover{
+    background-color: #f8dbdb;
+}
+
+.header-account-first:hover .acc-selection{
+    visibility: visible;
+}
+
+.fa-trash{
+    font-size: 17px;
+}
+
+/* xóa thông báo  */
+
+.deletedNotifi {
+    display: none;
+}
+
+/* phần menu dropdown của icon acc  */
+.header-account-img{
+    position: relative;
+}
+
+.header-acc-img_main{
+    display: none;
+    position: absolute;
+    right: -6px;
+    width: 298px;
+    background-color: #fff;
+    box-shadow: -1px 1px 5px 1px #f8dbdb;
+}
+.acc-img-main_title{
+    display: flex;
+    align-items: center;
+    padding:14px 0;
+}
+.acc-img-main_title img{
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.main_title-info p{
+    color: blueviolet;
+    margin-bottom: 0px;
+    margin-top: 0;
+    font-size: 14px;
+}
+.acc-img-main_content div{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.acc-img-main_content div:hover{
+    background-color: #f8e7e7;
+    cursor: pointer;
+}
+.acc-img-main_content div i{
+    font-size: 24px;
+    padding-right: 22px;
+    padding-left: 10px;
+    opacity: 0.8;
+}
+.acc-img-main_content div p{
+    font-size: 16px;
+    font-weight: 400;
+}
+/* css đóng mở dropdown acc  */
+
+.showAccInfo{
+    display: block;
+    animation: fadeIn ease 0.4s;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+.main{
+    /* position: sticky;
+    top: 100px; */
+    /* position: sticky; */
+    /* position: fixed; */
+    display: flex;
+    z-index: -10;
+    /* min-height: 100vh; */
+}
+.sidebar{
+    /* width: 300px; */
+    /* top: 0; */
+    /* position: sticky; */
+    width: 220px;
+    /* margin-right: 200px; */
+    /* background-color: #ccc; */
+}
+
+.content{
+    /* overflow: hidden; */
+    /* position: sticky;
+    top: 10px; */
+    
+    overflow-y: scroll;
+    /* overflow-y:auto; */
+    /* overflow-x : hidden ; */
+    /* overflow-y: visible; */
+    height: 698px;
+    /* height:100%; */
+
+    /* overflow: hidden; */
+    /* height: auto; */
+    /* min-height: 100vh; */
+    padding-left: 10px;
+    /* position: sticky; */
+    /* margin-top: 10px; */
+    /* margin: 0;
+    padding: 0; */
+    width: calc(100% - 220px);
+    /* hoac co the su dung flex:1 co tac dung chiem het chieu ngang con laii */
+
+    /* height: 100%;
+    width: 160px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px; */
+
+}
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+.content::-webkit-scrollbar-thumb {
+    background: rgb(253, 181, 181);
+    border-radius: 6px;
+}
+@media (min-width:740px) and (max-width:1024px){
+    .hide-on-tablet{
+        display: none;
+    }
+    .content{
+        width: 100%;
+    }
+}
+
+@media (max-width:739px) {
+    .hide-on-moblie{
+        display: none;
+    }
+    .content{
+        width: 100%;
+    }
+}
+
+/* Phần xử lí menu bên trái của youtube */
+.content-menu::-webkit-scrollbar {
+    width: 8px;
+}
+.content-menu::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 6px;
+    visibility: hidden;
+}
+.content-menu:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+.content-menu{
+    /* position: sticky;
+    top: 10px; */
+    
+    height: 698px;
+    overflow-y: scroll;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+/* phần xử lý khối 1  */
+.content-menu-box1 div{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 50px;
+}
+.content-menu-box1 div:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+.content-menu-box1 div i{
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.content-menu-box1 div p{
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+/* phần xử lý khối 2  */
+
+/* .menu-add-icon{
+    padding-left: 0px;
+} */
+
+.content-menu-box2 div{
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    height: 50px;
+    font-size: 15px;
+}
+.content-menu-box2 div:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+.content-menu-box2 b{
+    margin-left: 18px;
+}
+.content-menu-box2 div img{
+    border-radius: 50%;
+    width : 24px;
+    height: 24px;
+}
+.content-menu-box2 div p{
+    padding-left: 18px;
+    font-size: 15px;
+}
+.fa-satellite-dish{
+    padding-left: 50px;
+    font-size: 14px;
+    color: red;
+}
+.icon-down-box2{
+    align-items: center;
+    margin-left: 80px;
+}
+.icon-down-box2:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+/* phần xử lý menu box 3  */
+
+.content-menu-box3 div{
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    height: 50px;
+    font-size: 15px;
+}
+.content-menu-box3 div:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+/*  */
+.content-menu-box3 div i{
+    font-size: 20px;
+}
+.content-menu-box3 div img{
+    border-radius: 50%;
+    width : 24px;
+    height: 24px;
+}
+.content-menu-box3 div p{
+    padding-left: 18px;
+    font-size: 15px;
+}
+/* xử lý phần chữ cuối trang menu  */
+.content-menu .content-menu-text{
+    margin-left: 16px;
+}
+.content-menu .content-menu-text:hover{
+    cursor: pointer;
+    color: rgb(46, 14, 75);
+}
+.info-text{
+    font-size: 14px;
+    color: rgb(245, 94, 7);
+}
+.content-menu-text .author{
+    color: rgb(6, 6, 100);
+    font-weight: bolder;
+    font-size: 12px;
+    word-spacing: 4px;
+    font-style: italic;
+}
+/* ------------------------------------------------------------------------------------- */
+/* phan xu ly menu video cua youtube  */
+.body-many-videos{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+}
+.test{
+    height: 200px;
+}
+.video-info-title {    
+    display: flex;
+}
+.video-info-channel{
+    /* display: flex; */
+    margin-left: 48px;
+    font-size: 12px;
+}
+.video-info-time{
+    display: inline-flex;
+    align-items: center;
+}
+.video-info-time {
+    margin-top: -14px;
+}
+.body-many-videos a .video-info:hover{
+    color: #690a69;
+}
+.body-many-videos{
+    overflow: hidden;
+}
+.body-many-videos a img:hover{
+    transform: scale(1.05);
+    transition: 1s;
+    z-index: -2;
+}
+.body-many-videos img{
+    width: calc(100%) ;
+    height: calc(100%) ;
+}
+.video-info-title img{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* phần selection  */
+
+.selection{
+    z-index: 2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(231, 225, 225);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    /* background-color: rgb(243, 234, 234); */
+    background-color: #fff;
+}
+.selection div{
+    background-color: #ffeded;
+    border: 1px solid rgb(172, 145, 145);
+    border-radius: 22px;
+    padding: 0 10px;
+    align-items: center;
+}
+.selection div p{
+    
+    align-items: center;
+}
+a{
+    /* list-style: none; */
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+}
+.selection div:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    background: #ccc;
+    border-radius: 6px;
+} 
+/* PC */
+@media (min-width: 1113px) {
+    /* nút chính ẩn đi  */
+    #btnCLose{
+        display: none;
+    }
+
+}
+@media (max-width: 1113px) {
+
+    /* nút chính ẩn đi  */
+    #btnCLose{
+        display: block;
+        margin-bottom: 4px;
+    }
+    #btnCLoseNoEffect{
+        display: none;
+    }
+    
+}
+/* TABLET */
+@media (min-width: 740px) and (max-width: 1024px){
+    /* phần làm chức năng đóng mở menu  */
+    .headerClose{
+    position: relative;
+    }
+
+    .headerCloseBody{
+        /* display: none; */
+        background-color: rgba(187, 187, 187,0.6);
+        /* width: 100%; */
+        position: absolute;
+        top:43px;
+        right: -151px;
+        outline: 1px solid red;
+        outline: 1px solid #bbbbbb;
+        transform:translateX(0%);
+        transition: transform ease 0.4s;
+        border-radius: 1px ;
+    }
+    .closeMenuYT{
+        /* display: none; */
+        transform:translateX(-100%);
+    }
+    .headerCloseCSS{
+        width: 220px;
+        margin-left: 3px;
+        background-color: #fff;
+    }
+    .content{
+        min-height: 860px;
+    }
+}
+
+@media (max-width: 740px){
+    /* phần làm chức năng đóng mở menu  */
+    .headerClose{
+        position: relative;
+    }
+
+    .headerCloseBody{
+        /* display: none; */
+        position: absolute;
+        top:45px;
+        right: -154px;
+        outline: 1px solid #bbbbbb;
+        transform:translateX(0%);
+        transition: transform ease 0.4s;
+        border-radius: 1px ;
+    }
+    .closeMenuYT{
+        /* display: none; */
+        transform:translateX(-100%);
+    }
+    .headerCloseCSS{
+        width: 220px;
+        margin-left: 3px;
+        background-color: #fff;
+    }
+    .header-account-main{
+        top: 40px;
+        right: -66px;
+        width: 400px;
+    }
+    .header-account-first{
+        width: 400px;
+    }
+}
+@media (max-width: 667px){
+    .select:nth-child(6){
+        display: none;
+    }
+}
+/* chúc năng dom menu  */
+.selection .active{
+    background-color: rgb(197, 196, 197);
+}
+.list-dom{
+    display: none;
+}
+.showList{
+    display: flex;
+}
+
+/* // chức năng phân trang  */
+.slect-page{
+    text-align: center
+}
+.slect-page button{
+    /* display: inline-flex; */
+    padding: 7px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 2px;
+    margin-bottom:20px;
+    text-align:center;
+
+}
+.slect-page button:hover{
+    background-color: rgb(201, 159, 159);
+}
+
+.color-select{
+    background-color: rgb(201, 159, 159);
+}

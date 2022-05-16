@@ -1,0 +1,32 @@
+:root{
+    ---color-header: #ffffff;
+    ---color-btn: #faefef;
+    ---color-btn-hover: #dddddd;
+    --header-with-search-height:calc( var(--header-height) - var(--navbar-height) );
+}
+*{
+    box-sizing: border-box; 
+}
+
+html{
+    line-height: 1.6rem;
+    font-family: 'Roboto',sans-serif; 
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 6px;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
